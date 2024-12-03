@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <app-screen-header [show]="true" [firstLetter]="'F'" [title]="'AVOURITE LIST'"></app-screen-header>
+   <hr>
+  <div class="row">
+    <div class="col-md-3 col-sm-6" *ngFor="let movie of _productsService.favourites">
+      <app-product-card [product]="movie"></app-product-card>
+    </div>
+    <div class="col-md-3 col-sm-6  mx-auto mt-5 pt-5" *ngIf="_productsService.favourites.length == 0">
+      <img src="../../../assets/images/wishlistEmpty.png" width="300" alt="" srcset="">
+      <p class="fs-3 mx-5 px-2" style="display: block !important;">wishlist is Empty</p>
+    </div>
+  </div>
+</div>

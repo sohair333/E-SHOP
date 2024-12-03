@@ -1,0 +1,41 @@
+.card {
+    position: relative;
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+      .card-text {
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .votes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+  .total-price {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  
+    .text-success {
+      color: #28a745;
+    }
+  }
+  
+  .card {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+    

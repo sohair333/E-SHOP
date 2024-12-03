@@ -1,0 +1,51 @@
+<div class=" my-3 ">
+  <div class="">
+    <app-screen-header 
+      (CreateHandler)="openCreateDialog()" 
+      [firstLetter]="'E-'" 
+      [title]="'SHOP'">
+    </app-screen-header>
+    <app-hero-section></app-hero-section>
+    <p-tabView>
+      <p-progressSpinner *ngIf="loadingIndicator" styleClass="loading-spinner" [style]="{ 'width': '50px', 'height': '50px' , 'margin':'0 auto', 'display':'flex' , 'justify-content':'center' }"></p-progressSpinner>
+      <p-tabPanel header="Women's Clothing">
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center " *ngFor="let product of products['women\'s clothing']">
+            <app-product-card [product]="product" ></app-product-card>
+            
+          </div>
+        </div>
+      </p-tabPanel>
+
+      <p-tabPanel header="Men's Clothing">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center align-items-centerjustify-content-center" *ngFor="let product of products['men\'s clothing']">
+            <app-product-card [product]="product"></app-product-card>
+          </div>
+        </div>
+      </p-tabPanel>
+
+      <p-tabPanel header="Jewelry">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center" *ngFor="let product of products['jewelery']">
+            <app-product-card [product]="product"></app-product-card>
+          </div>
+        </div>
+      </p-tabPanel>
+
+      <p-tabPanel header="Electronics">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center" *ngFor="let product of products['electronics']">
+            <app-product-card [product]="product"></app-product-card>
+          </div>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+
+<p-toast></p-toast>

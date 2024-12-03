@@ -1,0 +1,61 @@
+.hero-container {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../../assets/images/pexels-ksenia-chernaya-3965545.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hero-content {
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+  
+      .hero-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Roboto', sans-serif;
+      }
+  
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        font-family: 'Open Sans', sans-serif;
+      }
+  
+      .hero-button {
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        background-color: #ff6f61;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #e64a43;
+        }
+      }
+    }
+  }
+  

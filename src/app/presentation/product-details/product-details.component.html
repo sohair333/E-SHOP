@@ -1,0 +1,40 @@
+<app-screen-header [show]="true" [firstLetter]="'P'" [title]="'RODUCT DEAILS'"></app-screen-header>
+
+<div class="product-container container">
+    <div class="row align-items-center">
+      <div class="col-lg-4">
+        <img [src]="product?.image" alt="product-image" class="img-fluid product-image">
+      </div>
+  
+      <div class="col-lg-6">
+        <div class="product-details">
+          <h5 class="product-brand">{{ product?.category }}</h5>
+          <h2 class="product-title">{{ product?.title }}</h2>
+          <p class="product-price">{{ product?.price }} EGP</p>
+  
+          <div class="product-rating">
+            <ng-container *ngFor="let star of getStarsArray(product?.rating)">
+              <i class="fa fa-star text-warning"></i>
+            </ng-container>
+            <span class="rating-count">({{ product?.rating?.rate }})</span>
+          </div>
+  
+          <div class="product-sizes">
+            <span *ngFor="let size of product?.sizes" class="size-box">{{ size }}</span>
+          </div>
+  
+          <p class="installment-info">
+            Pay over 5 payments of <strong>{{ product?.price }}</strong> EGP with your bank card.
+          </p>
+  
+          <div class="action-buttons">
+            <button class="btn btn-primary" (click)="addToCart(product)">
+              <i class="fa fa-shopping-cart"></i> Add To Cart
+            </button>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

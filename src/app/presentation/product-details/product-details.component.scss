@@ -1,0 +1,107 @@
+.product-container {
+    margin: 40px auto;
+
+    .product-image {
+        //   width: 100%;
+        width: 400px;
+        height: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-details {
+        h5.product-brand {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        h2.product-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            color: #e60000;
+            margin-bottom: 10px;
+        }
+
+        .product-sku {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            i {
+                font-size: 1.2rem;
+            }
+
+            .rating-count {
+                font-size: 0.9rem;
+                color: #555;
+                margin-left: 5px;
+            }
+        }
+
+        .product-sizes {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            .size-box {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 8px 15px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #007bff;
+                    color: #fff;
+                }
+            }
+        }
+
+        .installment-info {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 20px;
+
+            .learn-more {
+                color: #007bff;
+                text-decoration: underline;
+            }
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+
+            button {
+                padding: 10px 20px;
+                font-size: 1rem;
+
+                &.btn-primary {
+                    background-color: #007bff;
+                    border-color: #007bff;
+                }
+
+                &.btn-outline-secondary {
+                    border-color: #ccc;
+                    color: #555;
+
+                    i {
+                        color: #007bff;
+                    }
+                }
+            }
+        }
+    }
+}
