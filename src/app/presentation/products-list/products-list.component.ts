@@ -33,7 +33,6 @@ export class productsListComponent implements OnInit {
     this.getAllProducts()
   }
 
-
   getAllProducts(): void {
     this.productsService.getUpcomingProducts().pipe(
 
@@ -58,8 +57,6 @@ export class productsListComponent implements OnInit {
     });
   }
 
- 
-
   mappedObject(movie: any, found: boolean) {
     return {
       id: movie.id,
@@ -73,12 +70,9 @@ export class productsListComponent implements OnInit {
     };
   }
 
-
   openCreateDialog() {
     this.displayCreateDialog = true
   }
-
-
 
   close(flag: boolean) {
     this.displayCreateDialog = flag

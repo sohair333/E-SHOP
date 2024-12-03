@@ -18,8 +18,6 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private router: Router,private _productsService:productsService,private cartService:CoutnCardService,private messageService:MessageService) {
     const navigation = this.router.getCurrentNavigation();
     this.product = navigation?.extras.state?.['product'];
-    console.log(this.product,"pro");
-    
   }
 
   ngOnInit(): void {
